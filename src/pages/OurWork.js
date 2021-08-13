@@ -7,7 +7,8 @@ import goodtimes from "../img/goodtimes-small.png";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animation";
 import { useScroll } from "../components/Scroll";
-import { widthAnim } from "../Animation";
+import ScrollTop from "../components/ScrollTop";
+
 import {
   fade,
   photoAnim,
@@ -35,7 +36,7 @@ const OurWork = () => {
       <Movie>
         <motion.h2 variants={fade}>The Athlete</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/the-athlete">
+        <Link to="/work/the-athlete">
           <Hide>
             <motion.img
               variants={photoAnim}
@@ -59,7 +60,7 @@ const OurWork = () => {
       >
         <h2>The Racer</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/the-racer">
+        <Link to="/work/the-racer">
           <img src={theracer} alt="the racer" />
         </Link>
         <p>
@@ -77,7 +78,7 @@ const OurWork = () => {
       >
         <h2>Good Times</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/good-times">
+        <Link to="/work/good-times">
           <img src={goodtimes} alt="goodtimes" />
         </Link>
         <p>
@@ -87,6 +88,7 @@ const OurWork = () => {
           nobis eos. Temporibus.
         </p>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
@@ -99,6 +101,9 @@ const Work = styled(motion.div)`
   padding: 5rem 10rem;
   h2 {
     padding: 1rem 0rem;
+  }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
   }
 `;
 const Movie = styled(motion.div)`

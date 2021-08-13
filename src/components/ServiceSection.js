@@ -67,10 +67,13 @@ const Cards = styled.div`
   flex-wrap: wrap;
 `;
 const Card = styled.div`
-  flex-basis: 13rem;
+  flex-basis: 15rem;
   .icon {
     display: flex;
     align-items: center;
+    @media (max-width: 1300px) {
+      justify-content: center;
+    }
     h3 {
       margin-left: 1rem;
       background: white;

@@ -5,8 +5,15 @@ margin: 0%;
 padding: 0%;
 box-sizing: border-box;
 }
+html{
+    @media (max-width: 1700px){
+        font-size: 75%;
+    }
+   
+}
 body{
     background: #1b1b1b;
+    font-family: 'Inter', sans-serif;
 }
 button{
     font-weight: bold;
@@ -17,6 +24,7 @@ button{
     background: transparent;
     color: white;
     transition: all 0.5s ease;
+    font-family: 'Inter', sans-serif;
     &:hover{
         background: #23d997;
         color: white;
